@@ -4,8 +4,8 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const name = 'Aaron Philip';
-export const siteTitle = "Aaron's Blog";
+const name = 'COSMOS MITWPU';
+export const siteTitle = "Cosmos Club Website";
 
 export default function Layout({ children, home }) {
   return (
@@ -25,18 +25,19 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <div className={styles.starrySky}></div> {/* Starry sky background */}
       <header className={styles.header}>
         {home ? (
           <>
             <Image
               priority
-              src="/images/rsz_profile-pic.jpg"
+              src="/images/cosmos.jpg"
               className={utilStyles.borderCircle}
               height={144}
               width={144}
               alt=""
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={utilStyles.headingXl}>{name}</h1>
           </>
         ) : (
           <>
